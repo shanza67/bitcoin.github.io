@@ -76,6 +76,12 @@ button {
 .gap-4{
   gap:1.5rem;
 }
+.gap-5{
+  gap:2rem;
+}
+.gap-6{
+  gap:2.5rem;
+}
 .w-100{
   width:100%;
 }
@@ -103,4 +109,17 @@ button {
   font-weight:400;
   font-size:20px;
   line-height:24.2px; 
+}
+
+.color-gray{
+  color:#767A89
+}
+.color-green{
+  color:#5BDF8B
+}
+.color-red{
+  color:#F34554
+}
+.light-white{
+  color:#DEDDDD
 }
