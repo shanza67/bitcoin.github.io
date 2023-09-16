@@ -64,8 +64,14 @@ button {
 .justify-content-between{
   justify-content: space-between;
 }
+.justify-content-end{
+  justify-content: flex-end;
+}
 .flex-wrap{
   flex-wrap: wrap;
+}
+.gap-1{
+gap:5px;
 }
 .gap-2{
   gap:0.5rem;
@@ -102,6 +108,11 @@ button {
   color:#FFFFFF;
   background:#6C62E2;
 }
+.container{
+  background:#010E29;
+  border-radius:20px;
+  padding:16px;
+}
 
 /* ========= Typography============= */
 
@@ -109,6 +120,9 @@ button {
   font-weight:400;
   font-size:20px;
   line-height:24.2px; 
+}
+.text-end{
+  text-align:end;
 }
 
 .color-gray{
@@ -123,3 +137,12 @@ button {
 .light-white{
   color:#DEDDDD
 }
+.color-active{
+  color :#6C62E2;
+}
+.color-white{
+  color:#FFFFFF;
+}
+
+/* =====Global ==== */
+

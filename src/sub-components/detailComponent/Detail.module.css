@@ -1,0 +1,18 @@
+.searchField{
+    height:55px;
+    border-radius:50px;
+    border:none;
+    background:#1E2A44;
+    padding:0px 15px;
+    padding-left:52px;
+    color:white;
+}
+.searchField:focus-visible{
+    border:none;
+    outline:none;
+}
+.searchIcon{
+    position:absolute;
+    top:33%;
+    left:5%;
+}
