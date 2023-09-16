@@ -13,6 +13,7 @@ const OrderDetail = () => {
     { title: "Price", sorting: true },
     { title: "Change", sorting: true },
   ];
+  
   const OrderData = [
     {
       item1: { value: "61,134.11", color: "color-green" },
