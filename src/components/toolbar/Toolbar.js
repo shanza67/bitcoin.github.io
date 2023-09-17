@@ -7,7 +7,7 @@ import play from "../../images/mdi_play.svg";
 
 const Toolbar = () => {
   return (
-    <div className={`d-flex align-items-center justify-content-between w-100`}>
+    <div className={`d-flex align-items-center justify-content-between w-100`} style={{margin:"20px 0px"}}>
       <div className="d-flex align-items-center gap-5">
         <div className="d-flex align-items-start gap-2">
           <img src={bitcoin} alt="" />
