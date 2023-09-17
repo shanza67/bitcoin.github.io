@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./Toolbar.module.css";
+import { useWindowSize } from "react-use";
 
 import bitcoin from "../../images/bitCoin.svg";
 import down from "../../images/vectorDown.svg";
 import play from "../../images/mdi_play.svg";
 
 const Toolbar = () => {
+  const { width } = useWindowSize();
   return (
-    <div className={`d-flex align-items-center justify-content-between w-100`} style={{margin:"20px 0px"}}>
-      <div className="d-flex align-items-center gap-5">
+    <div className={`d-flex align-items-cente  justify-content-between w-100`} style={{margin:"20px 0px"}}>
+      <div className={`d-flex align-items-center gap-5 ${width < 1450 && 'flex-wrap'}`}>
         <div className="d-flex align-items-start gap-2">
           <img src={bitcoin} alt="" />
           <div className="d-flex flex-column gap-2">

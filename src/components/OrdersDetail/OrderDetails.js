@@ -42,7 +42,32 @@ const OrderDetail = () => {
       item1: { value: "61,134.11", color: "color-green" },
       item2: { value: "61,134.11", color: "color-white" },
       item3: { value: "61,134.11", color: "color-white" },
+    },
+    {
+      item1: { value: "61,134.11", color: "color-green" },
+      item2: { value: "61,134.11", color: "color-white" },
+      item3: { value: "61,134.11", color: "color-white" },
+    },
+    {
+      item1: { value: "61,134.11", color: "color-green" },
+      item2: { value: "61,134.11", color: "color-white" },
+      item3: { value: "61,134.11", color: "color-white" },
+    },
+    {
+      item1: { value: "61,134.11", color: "color-green" },
+      item2: { value: "61,134.11", color: "color-white" },
+      item3: { value: "61,134.11", color: "color-white" },
       divider: true,
+    },
+    {
+      item1: { value: "61,134.11", color: "color-red" },
+      item2: { value: "61,134.11", color: "color-white" },
+      item3: { value: "61,134.11", color: "color-white" },
+    },
+    {
+      item1: { value: "61,134.11", color: "color-red" },
+      item2: { value: "61,134.11", color: "color-white" },
+      item3: { value: "61,134.11", color: "color-white" },
     },
     {
       item1: { value: "61,134.11", color: "color-red" },
@@ -71,6 +96,74 @@ const OrderDetail = () => {
     },
   ];
   const data2 = [
+    {
+      item1: {
+        value: (
+          <div className="d-flex align-items-center gap-2">
+            <div>
+              <img src={star} alt="" />
+            </div>
+            <div className="text color-white">
+              ARPA<span className="text color-gray">/BTC</span>
+            </div>
+          </div>
+        ),
+        color: "color-green",
+      },
+      item2: { value: "0.0000019", color: "color-green" },
+      item3: { value: "+2.87%", color: "color-green" },
+    },
+    {
+      item1: {
+        value: (
+          <div className="d-flex align-items-center gap-2">
+            <div>
+              <img src={star} alt="" />
+            </div>
+            <div className="text color-white">
+              ARPA<span className="text color-gray">/BTC</span>
+            </div>
+          </div>
+        ),
+        color: "color-green",
+      },
+      item2: { value: "0.0000019", color: "color-green" },
+      item3: { value: "+2.87%", color: "color-green" },
+    },
+    {
+      item1: {
+        value: (
+          <div className="d-flex align-items-center gap-2">
+            <div>
+              <img src={star} alt="" />
+            </div>
+            <div className="text color-white">
+              ARPA<span className="text color-gray">/BTC</span>
+            </div>
+          </div>
+        ),
+        color: "color-green",
+      },
+      item2: { value: "0.0000019", color: "color-green" },
+      item3: { value: "+2.87%", color: "color-green" },
+    },
+    {
+      item1: {
+        value: (
+          <div className="d-flex align-items-center gap-2">
+            <div>
+              <img src={star} alt="" />
+            </div>
+            <div className="text color-white">
+              ARPA<span className="text color-gray">/BTC</span>
+            </div>
+          </div>
+        ),
+        color: "color-green",
+      },
+      item2: { value: "0.0000019", color: "color-green" },
+      item3: { value: "+2.87%", color: "color-green" },
+    },
     {
       item1: {
         value: (
