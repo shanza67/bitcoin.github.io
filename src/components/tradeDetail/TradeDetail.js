@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import DetailTab from "../../sub-components/detailComponent/DetailTab";
 import LimitSection from "../../sub-components/limitSection/LimitSection";
+import { useWindowSize } from "react-use";
 
 const TradeDetail = () => {
   const [activeTab, setActiveTab] = useState("spot");
+  const { width } = useWindowSize();
   const TradeHeader = [
     { title: "Price(USDT)" },
     { title: "Amount(BTC)" },
@@ -73,15 +75,15 @@ const TradeDetail = () => {
   ];
   return (
     <div
-      className="d-flex align-items-center w-100 gap-2 w-100"
+      className={`d-flex align-items-center w-100 gap-2 w-100 ${width < 1440 && 'flex-wrap'}`}
       style={{ alignItems: "stretch" }}
     >
       <div
-        className="container d-flex flex-column gap-3"
+        className="container d-flex flex-column gap-3 w-100"
         style={{ flex: "1 1 auto" }}
       >
         <div
-          className="d-flex align-items-center gap-3"
+          className={`d-flex align-items-center gap-3 w-100 ${width < 1440 && 'flex-wrap'}`}
           style={{ borderBottom: "1px solid #353B50", paddingBottom: "22px" }}
         >
           <button
@@ -148,9 +150,9 @@ const TradeDetail = () => {
             Stop-limit
           </div>
         </div>
-        <div className="d-flex w-100 gap-3">
-          <LimitSection forBuy text="Buy BTC" />
-          <LimitSection forsell text="Sell BTC" />
+        <div className={`d-flex w-100 gap-3 ${width < 980 && 'flex-column'}`}>
+          <LimitSection forBuy text="Buy BTC" width ={width < 980 && 'w-100'} />
+          <LimitSection forsell text="Sell BTC" width ={width < 980 && 'w-100'} />
         </div>
       </div>
       <DetailTab
@@ -162,6 +164,7 @@ const TradeDetail = () => {
         }
         header={TradeHeader}
         data={data}
+        width={width < 1440 ? '100%' : '35%'}
       />
     </div>
   );

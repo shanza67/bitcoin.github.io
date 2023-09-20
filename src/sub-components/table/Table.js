@@ -105,7 +105,7 @@ const data = [
 export const TableComponet = () => {
  
   return (
-    <div className="table-fix-header">
+    <div className="w-100 overflow-auto">
       {/* <table
           borderless
           className={` main-table rounded-top `}
@@ -143,7 +143,7 @@ export const TableComponet = () => {
             })}
           </tbody>
         </table> */}
-      <table className={`w-100 ${styles.customeTable}`}>
+      <table className={`w-100 ${styles.customeTable}`}  style={{minWidth:"1440px"}} >
         <thead>
           <tr>
             {header?.map((item, idx) => {

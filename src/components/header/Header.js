@@ -8,6 +8,7 @@ import down from "../../images/vectorDown.svg";
 import deposit from "../../images/deposit.svg";
 import bell from "../../images/bell.svg";
 import profile from "../../images/profile.svg";
+import CustomeSelector from "../../sub-components/selector/Selector";
 
 const Header = () => {
   const [notifications, setNotifications] = useState(23);
@@ -26,6 +27,7 @@ const Header = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
+
 
   return (
     <header
@@ -50,13 +52,16 @@ const Header = () => {
           <div className={`d-flex align-items-center gap-3`}>
             {navItems?.map((item, idx) => {
               return (
+                !item.selector ?  
                 <div
                   key={idx}
                   className={`d-flex align-items-center cursor-pointer gap-2`}
+                  style={{ position: "relative" }}
                 >
                   <span className={`text`}>{item?.navItem} </span>
-                  {item.selector && <img src={down} alt="" />}
-                </div>
+                 
+                </div> :
+                (<CustomeSelector title={item?.navItem}/>)
               );
             })}
           </div>
@@ -74,14 +79,12 @@ const Header = () => {
           >
             Wallet
           </button>
-          <div className={`d-flex align-items-center cursor-pointer gap-2`}>
+          <CustomeSelector title={"Assets"}/>
+          {/* <div className={`d-flex align-items-center cursor-pointer gap-2`}>
             <span className={`text`}>Assets </span>
             <img src={down} alt="" />
-          </div>
-          <div className={`d-flex align-items-center cursor-pointer gap-2`}>
-            <span className={`text`}>Trades </span>
-            <img src={down} alt="" />
-          </div>
+          </div> */}
+          <CustomeSelector title={"Trades"}/>
           <div className="cursor-pointer" style={{ position: "relative" }}>
             <img src={bell} alt="" />
             {notifications && (
@@ -105,8 +108,9 @@ const Header = () => {
         </div>
       )}
 
-      {showNavbar && <div className="mobile-navbar">
-      <div className={`d-flex flex-column  gap-3`}>
+      {showNavbar && (
+        <div className="mobile-navbar">
+          <div className={`d-flex flex-column  gap-3`}>
             {navItems?.map((item, idx) => {
               return (
                 <div
@@ -120,26 +124,33 @@ const Header = () => {
             })}
           </div>
           <div className={`d-flex flex-column gap-3`}>
-          <div className={`d-flex align-items-center cursor-pointer gap-2`}>
-            <span className={`text`}>Assets </span>
-            <img src={down} alt="" />
-          </div>
-          <div className={`d-flex align-items-center cursor-pointer gap-2`}>
-            <span className={`text`}>Trades </span>
-            <img src={down} alt="" />
-          </div>
-          <button className={`d-flex align-items-center gap-2 btn-style text`} style={{width:"fit-content"}}>
-            <img src={deposit} alt="" />
-            Deposit
-          </button>
-          <button
-            className={`d-flex align-items-center gap-2 btn-style text`}
-            style={{ background: "transparent", border: "1px solid #767A89",width:"fit-content" }}
-          >
-            Wallet
-          </button>
-          
-          {/* <div className="cursor-pointer" style={{ position: "relative" }}>
+            <div className={`d-flex align-items-center cursor-pointer gap-2`}>
+              <span className={`text`}>Assets </span>
+              <img src={down} alt="" />
+            </div>
+            <div className={`d-flex align-items-center cursor-pointer gap-2`}>
+              <span className={`text`}>Trades </span>
+              <img src={down} alt="" />
+            </div>
+            <button
+              className={`d-flex align-items-center gap-2 btn-style text`}
+              style={{ width: "fit-content" }}
+            >
+              <img src={deposit} alt="" />
+              Deposit
+            </button>
+            <button
+              className={`d-flex align-items-center gap-2 btn-style text`}
+              style={{
+                background: "transparent",
+                border: "1px solid #767A89",
+                width: "fit-content",
+              }}
+            >
+              Wallet
+            </button>
+
+            {/* <div className="cursor-pointer" style={{ position: "relative" }}>
             <img src={bell} alt="" />
             {notifications && (
               <span className={` ${styles.notificationBadge}`}>
@@ -147,14 +158,15 @@ const Header = () => {
               </span>
             )}
           </div> */}
-          {/* <div
+            {/* <div
             style={{ width: "57px", height: "57px" }}
             className="cursor-pointer"
           >
             <img src={profile} alt="" />
           </div> */}
+          </div>
         </div>
-      </div>}
+      )}
     </header>
   );
 };

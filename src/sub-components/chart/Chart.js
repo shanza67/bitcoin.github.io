@@ -32,7 +32,7 @@ const axisStyles = {
 
 const coordinateStyles = {
   fill: "#383E55",
-  textFill: "yellow",
+  textFill: "white",
   gridLinesStrokeDasharray: "solid",
 };
 

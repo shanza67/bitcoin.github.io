@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./LimitSection.module.css";
 
-const LimitSection = ({ forBuy, forsell, text }) => {
+const LimitSection = ({ forBuy, forsell, text , width }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (e) => {
@@ -9,14 +9,15 @@ const LimitSection = ({ forBuy, forsell, text }) => {
   };
 
   return (
-    <div className={`d-flex flex-column gap-3 w-50 ${styles.limitContainer}`}>
+    <div className={`d-flex flex-column gap-3 w-50 ${width} ${styles.limitContainer}`}>
       <div className="text color-gray">
         Avbl<span className="color-white"> 0.25232634 USDT</span>
       </div>
       <div
         className={`d-flex align-items-center justify-content-between w-100 ${styles.dataField}`}
       >
-        <span className="text color-gray">Price</span>
+        {/* <span className="text color-gray">Price</span> */}
+        <input type="text" placeholder="Price" className="text color-gray" style={{height:"64px" ,maxWidth:"70px" , background:"unset" , border:"none" , outline:"none"}} />
         <div className="d-flex align-items-center gap-3">
           <span className="text color-white" style={{ fontWeight: "600" }}>
             25252.1
@@ -29,7 +30,8 @@ const LimitSection = ({ forBuy, forsell, text }) => {
       <div
         className={`d-flex align-items-center justify-content-between w-100 ${styles.dataField}`}
       >
-        <span className="text color-gray">Amount</span>
+        {/* <span className="text color-gray">Amount</span> */}
+        <input type="text" placeholder="Amount" className="text color-gray" style={{height:"64px" ,maxWidth:"70px" , background:"unset" , border:"none" , outline:"none"}} />
         <div className="d-flex align-items-center gap-3">
           <span className="text color-white" style={{ fontWeight: "600" }}>
             BTC
@@ -52,7 +54,8 @@ const LimitSection = ({ forBuy, forsell, text }) => {
       <div
         className={`d-flex align-items-center justify-content-between w-100 ${styles.dataField}`}
       >
-        <span className="text color-gray">Total</span>
+        {/* <span className="text color-gray">Total</span> */}
+        <input type="text" placeholder="Total" className="text color-gray" style={{height:"64px" ,maxWidth:"70px" , background:"unset" , border:"none" , outline:"none"}} />
         <div className="d-flex align-items-center gap-3">
           <span className="text color-white" style={{ fontWeight: "600" }}>
             USDT

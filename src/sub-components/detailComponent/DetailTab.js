@@ -10,12 +10,12 @@ import search from "../../images/search1.svg";
 import star from "../../images/star.svg";
 import jumperBtn from "../../images/jumpRight.svg";
 
-const DetailTab = ({ title, header, data, showSearchField, showToolbar }) => {
+const DetailTab = ({ title, header, data, showSearchField, showToolbar , width}) => {
 
   return (
     <div
-      className="container d-flex flex-column gap-3"
-      style={{ width: "438px" }}
+      className="container d-flex flex-column gap-3 "
+      style={{ minWidth: width? width : '35%' }}
     >
       {title && (
         <div className="d-flex align-items-center justify-content-between w-100">

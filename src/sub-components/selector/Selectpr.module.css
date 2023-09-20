@@ -1,0 +1,20 @@
+.customSeelector{
+    background:unset;
+    border:unset;
+    color:white;
+	/* inline SVG */
+  background-image: url("../../images/vectorDown.svg");
+  background-position: right 0px center;
+  background-repeat: no-repeat;
+  background-size: auto 27%;
+  border-radius:2px;
+  border:none;
+  color: #ffffff;
+  padding: 10px 30px 10px 10px;
+
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-ms-expand { display: none };
+}
